@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let i = colorChanged = false;
+
+        function changeColors (){
+            if(!colorChanged){
+            let content = document.getElementById("convert").innerHTML;
+            changedContent = content.replace(/\S/g, '<span>$&</span>');
+
+            document.getElementById("convert").innerHTML = changedContent;
+
+            let colorArray = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"];
+            let i;
+            let children = document.getElementById("convert").children;
+            for(let i = 0; i < children.length ; i ++){
+                if(i === 0 || i % 7 === 0){
+                    const child = children[i];
+                    child.style.color = colorArray[0];
+                }
+                if(i === 1){
+                    const child = children[i];
+                    child.style.color = colorArray[1];
+                }
+                if(i === 2){
+                    const child = children[i];
+                    child.style.color = colorArray[2];
+                }
+                if(i === 3){
+                    const child = children[i];
+                    child.style.color = colorArray[3];
+                }
+                if(i === 4){
+                    const child = children[i];
+                    child.style.color = colorArray[4];
+                }
+                if(i === 5){
+                    const child = children[i];
+                    child.style.color = colorArray[5];
+                }
+                if(i === 6){
+                    const child = children[i];
+                    child.style.color = colorArray[6];
+                }
+                if(i % 7 === 1){
+                    const child = children[i];
+                    child.style.color = colorArray[1];
+                }
+                if(i % 7 === 2){
+                    const child = children[i];
+                    child.style.color = colorArray[2];
+                }
+                if(i % 7 === 3){
+                    const child = children[i];
+                    child.style.color = colorArray[3];
+                }
+                if(i % 7 === 4){
+                    const child = children[i];
+                    child.style.color = colorArray[4];
+                }
+                if(i % 7 === 5){
+                    const child = children[i];
+                    child.style.color = colorArray[5];
+                }
+                if(i % 7 === 6){
+                    const child = children[i];
+                    child.style.color = colorArray[6];
+                }
+            }
+            colorChanged = true;
+        }
+        }
+    </script>
+</head>
+<body>
+    <div class = "main">
+        <div class = "main">
+            <p id="convert">Our industry-first intelligent alerting not only prioritizes alerts but also helps you solve the problem with step-by-step prompts</p>
+        </div>
+        <div>
+            <button onClick = "changeColors()" id = "color">Change Colors</button>
+        </div>
+    </div>
+</body>
+</html>
